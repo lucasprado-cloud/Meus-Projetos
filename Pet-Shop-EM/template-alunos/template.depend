@@ -1,0 +1,84 @@
+# depslib dependency file v1.0
+1755884726 source:c:\users\sobre\onedrive\documentos\linguagemc\template\cadastrar.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"comercio-template.h"
+
+1755884178 source:c:\users\sobre\onedrive\documentos\linguagemc\template\main.c
+	<stdio.h>
+	<locale.h>
+	"comercio-template.h"
+
+1755884708 source:c:\users\sobre\onedrive\documentos\linguagemc\template\exibir.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"comercio-template.h"
+
+1755883763 c:\users\sobre\onedrive\documentos\linguagemc\template\comercio-template.h
+
+1755885129 source:c:\users\sobre\onedrive\documentos\linguagemc\template-professor\cadastrar.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"comercio-template.h"
+
+1755883763 c:\users\sobre\onedrive\documentos\linguagemc\template-professor\comercio-template.h
+
+1755885171 source:c:\users\sobre\onedrive\documentos\linguagemc\template-professor\exibir.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"comercio-template.h"
+
+1755885165 source:c:\users\sobre\onedrive\documentos\linguagemc\template-professor\main.c
+	<stdio.h>
+	<locale.h>
+	"comercio-template.h"
+
+1755885129 source:c:\users\sobre\onedrive\documentos\linguagemc\template-alunos\cadastrar.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"comercio-template.h"
+
+1755883763 c:\users\sobre\onedrive\documentos\linguagemc\template-alunos\comercio-template.h
+
+1755885171 source:c:\users\sobre\onedrive\documentos\linguagemc\template-alunos\exibir.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"comercio-template.h"
+
+1755885165 source:c:\users\sobre\onedrive\documentos\linguagemc\template-alunos\main.c
+	<stdio.h>
+	<locale.h>
+	"comercio-template.h"
+
+1759762924 source:c:\users\aluno\music\template-alunos-trabalho-davi-lucas-3ds\template-alunos\exibir.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"comercio-template.h"
+
+1759763043 c:\users\aluno\music\template-alunos-trabalho-davi-lucas-3ds\template-alunos\comercio-template.h
+
+1759761115 source:c:\users\aluno\music\template-alunos-trabalho-davi-lucas-3ds\template-alunos\main.c
+	<stdio.h>
+	<locale.h>
+	"comercio-template.h"
+
+1759763197 source:c:\users\aluno\music\template-alunos-trabalho-davi-lucas-3ds\template-alunos\cadastrar.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<locale.h>
+	"comercio-template.h"
+

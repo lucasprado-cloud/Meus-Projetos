@@ -1,0 +1,138 @@
+create database petshop;
+
+use petshop;
+
+create table produtos(id_produtos bigint primary key auto_increment not null,
+						nome_produto varchar(45) not null,
+                        tipo_produto varchar(45) not null,
+                        data_de_fabricacao datetime not null,
+                        data_de_validade datetime not null,
+                        tipo_pet varchar(45) not null,
+                        quantidade_produto int not null);
+                        
+create table venda(id_venda bigint primary key auto_increment not null,
+						valor_da_compra float not null,
+                        quantidade_itens int not null,
+                        id_produtos bigint,
+                        foreign key(id_produtos) references produtos(id_produtos));
+                        
+create table serviços(id_serviço bigint primary key auto_increment not null,
+						tipo_serviço varchar(45) not null,
+                        valor_do_serviço float not null,
+                        tipo_pet varchar(45) not null,
+                        quantidade_pets int not null);
+                        
+create table estoque (
+					id_produtos bigint,
+                    foreign key (id_produtos) references produtos(id_produtos));
+                    
+INSERT INTO produtos (nome_produto, tipo_produto, data_de_fabricacao, data_de_validade, tipo_pet, quantidade_produto)
+VALUES ('Perfume para Pets', 'Spray', '2024/09/28 12:24:55', '2025/08/16 18:48:07', 'Pets com pelos', '50'),
+	   ('Sabonetes para cães', 'Líquido', '2024/06/17 17:27:28', '2025/06/10 19:19:19', 'Para cães', '150'),
+	   ('Xampus secos', 'Em pó', '2025-01-15 16:16:25', '2026-01-15 15:23:35', 'Para cães e gatos', '60'),
+	   ('Ração para Gatos', 'A Granel', '2025/05/19 17:58:59', '2026/03/03 15:37:29', 'Gatos', '30'),
+	   ('Ração para Câes', 'A Granel', '2025/02/28 16:35:41', '2026/01/03 12:46:14', 'Cães', '35'),
+	   ('Coleira', 'Acessórios', '2025-03-10 14:00:00', '2026-03-10 09:30:00', 'Para cães e gatos', '86'),
+	   ('Guias', 'Acessórios', '2024-12-01 16:45:00', '2025-12-01 12:00:00', 'Para cães e gatos', '67'),
+	   ('Petiscos', 'Alimento', '2025-04-05 09:00:00', '2026-04-05 18:10:00', 'Para cães e gatos', '102'),
+	   ('Ração úmida (sachês ou latas)', 'Alimento', '2025-05-12 12:30:00', '2026-05-12 15:55:00', 'Para cães e gatos', '60'),
+	   ('Ossos para mastigar (para cães)', 'Brinquedo', '2025-01-25 17:00:00', '2026-01-25 10:40:00', 'Para cães', '58'),
+	   ('Comedouros e bebedouros', 'Acessórios', '2025-03-30 10:30:00', '2026-03-30 19:20:00', 'Para todos os pets', '258'),
+	   ('Antipulgas e carrapatos (para cães e gatos)', 'Higiene', '2024-11-10 13:45:00', '2025-11-10 07:00:00', 'Para cães e gatos', '230'),
+	   ('Produtos para limpeza e desodorização de ambientes (para gatos e outros pets)', 'Higiene', '2025-04-18 15:15:00', '2026-04-18 11:30:00', 'Para todos os pets', '249'),
+	   ('Brinquedos (bolas, cordas, ossos, etc.)', 'Brinquedo', '2025-02-05 07:45:00', '2026-02-05 16:05:00', 'Para todos os pets', '499'),
+	   ('Caminhas', 'Acessórios', '2025-05-25 19:00:00', '2026-05-25 13:20:00', 'Para cães e gatos', '509'),
+	   ('Casinhas', 'Acessórios', '2025-01-05 11:45:00', '2026-01-05 08:50:00', 'Para cães e gatos', '607'),
+	   ('Roupas para cães e gatos', 'Acessórios', '2025-03-15 16:30:00', '2026-03-15 19:55:00', 'Para cães e gatos', '105'),
+	   ('Acessórios de passeio (guia, peitoral)', 'Acessórios', '2024-12-20 09:15:00', '2025-12-20 14:30:00', 'Para cães', '209'),
+	   ('Escovas para cães e gatos', 'Acessórios', '2025-04-25 14:45:00', '2026-04-25 10:10:00', 'Para cães e gatos', '398'),
+	   ('Alimentos para roedores (coelho, rato, hamster)', 'Alimento', '2025-02-10 10:00:00', '2026-02-10 17:20:00', 'Para roedores', '509'),
+	   ('Alimentos para aves', 'Alimento', '2025-05-05 17:30:00', '2026-05-05 12:45:00', 'Para aves', '340'),
+	   ('Tapetes higiênicos para cães', 'Higienes', '2025-01-30 13:00:00', '2026-01-30 09:05:00', 'Para cães', '847'),
+	   ('Roupas e acessórios para cães e gatos', 'Acessórios', '2025-03-20 08:45:00', '2026-03-20 18:30:00', 'Para cães e gatos', '380'),
+	   ('Produtos para tosa (tesouras, alicates de unha, escovas)', 'Higiene', '2024-11-25 15:30:00', '2025-11-25 11:00:00', 'Para cães e gatos', '388'),
+	   ('Produtos para transporte de pets (caixas de transporte, cintos de segurança)', 'Transporte', '2025-04-10 11:00:00', '2026-04-10 16:45:00', 'Para cães e gatos', '298'),
+	   ('Produtos para peixes de aquário (alimentos, acessórios, produtos de higiene)', 'Para peixes', '2025-02-25 18:15:00', '2026-02-25 13:50:00', 'Para peixes', '874'),
+	   ('Produtos para pássaros (casinhas, gaiolas, alimentos)', 'Para aves', '2025-05-15 09:30:00', '2026-05-15 07:15:00', 'Para aves', '376'),
+	   ('Areia sanitária para gatos', 'Higiene', '2025-01-10 14:00:00', '2026-01-10 19:30:00', 'Para gatos', '749'),
+	   ('Medicamentos veterinários', 'Saúde', '2025/02/01 18:27:15', '2026/02/05 16:18:20', 'Para todos os pets', '2847');
+
+
+ALTER TABLE estoque
+add quantidade_produto_estoque int not null;
+
+select * from estoque;
+
+INSERT INTO venda (valor_da_compra, quantidade_itens, id_produtos, data_venda)
+VALUES	(59.90, 1, 59, '2025-05-01 09:00:00'),
+		(39.50, 2, 60, '2025-05-02 10:30:00'),
+		(27.80, 1, 61, '2025-05-03 14:15:00'),
+		(72.00, 3, 62, '2025-05-04 11:50:00'),
+		(87.50, 1, 63, '2025-05-05 16:00:00'),
+		(120.00, 2, 64, '2025-05-06 10:45:00'),
+		(105.00, 1, 65, '2025-05-07 13:20:00'),
+		(210.00, 3, 66, '2025-05-08 09:30:00'),
+		(45.90, 1, 67, '2025-05-09 15:10:00'),
+		(55.00, 2, 68, '2025-05-10 12:00:00'),
+		(180.00, 3, 69, '2025-05-11 14:00:00'),
+		(30.00, 1, 70, '2025-05-12 17:00:00'),
+		(80.00, 2, 71, '2025-05-13 18:30:00'),
+		(66.30, 1, 72, '2025-05-14 10:45:00'),
+		(250.00, 2, 73, '2025-05-15 09:20:00'),
+		(320.00, 3, 74, '2025-05-16 11:10:00'),
+		(40.00, 1, 75, '2025-05-17 13:00:00'),
+		(85.00, 1, 76, '2025-05-18 16:30:00'),
+		(23.00, 1, 77, '2025-05-19 14:45:00'),
+		(70.00, 1, 78, '2025-05-20 11:00:00'),
+		(120.00, 2, 79, '2025-05-21 10:30:00'),
+		(55.50, 1, 80, '2025-05-22 15:00:00'),
+		(99.90, 2, 81, '2025-05-23 09:00:00'),
+		(125.00, 3, 82, '2025-05-24 17:45:00'),
+		(210.00, 4, 83, '2025-05-25 13:15:00'),
+		(190.00, 2, 84, '2025-05-26 14:30:00'),
+		(75.50, 1, 85, '2025-05-27 11:50:00'),
+		(29.00, 1, 86, '2025-05-28 16:00:00'),
+		(350.00, 5, 87, '2025-05-29 14:10:00');
+        
+INSERT INTO serviços (tipo_serviço, valor_do_serviço, tipo_pet, quantidade_pets)
+VALUES
+('Banho e Tosa', 50.0, 'Cães', 30),
+('Consultas Veterinárias', 120.0, 'Cães e Gatos', 50),
+('Vacinação', 80.0, 'Gatos', 40),
+('Clipping de Unhas', 30.0, 'Cães', 60),
+('Higienização de Ambiente', 100.0, 'Todos', 25);
+
+
+INSERT INTO estoque (id_produtos, quantidade_produto_estoque)
+VALUES
+(59, 50),
+(60, 150),
+(61, 60),
+(62, 30),
+(63, 35),
+(64, 86),
+(65, 67),
+(66, 102),
+(67, 60),
+(68, 58),
+(69, 258),
+(70, 230),
+(71, 249),
+(72, 499),
+(73, 509),
+(74, 607),
+(75, 105),
+(76, 209),
+(77, 398),
+(78, 509),
+(79, 340),
+(80, 847),
+(81, 380),
+(82, 388),
+(83, 298),
+(84, 874),
+(85, 376),
+(86, 749),
+(87, 2847);
+
+
