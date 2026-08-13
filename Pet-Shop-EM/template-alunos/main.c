@@ -19,19 +19,19 @@
 
          switch (opcao) {
             case 1:
-                cadastrarProduto(); // chama a função que cadastra produtos
+                cadastrarProduto(); // chama a funï¿½ï¿½o que cadastra produtos
                 break;
             case 2:
-                mostrarEstoque();  // chama a função que mostra o estoque
+                mostrarEstoque();  // chama a funï¿½ï¿½o que mostra o estoque
                 break;
             case 3:
-                venderProduto();   // chama a função que realiza a venda
+                venderProduto();   // chama a funï¿½ï¿½o que realiza a venda
                 break;
             case 0:
                 printf("Saindo...\n"); // mensagem ao sair do programa
                 break;
             default:
-                printf("Opção inválida!\n"); // caso o usuário digite algo errado
+                printf("Opï¿½ï¿½o invï¿½lida!\n"); // caso o usuï¿½rio digite algo errado
         }
     } while (opcao != 0);
 

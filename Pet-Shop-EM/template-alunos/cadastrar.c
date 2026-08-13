@@ -5,6 +5,7 @@
 #include "comercio-template.h"
 
 
+Produto estoque[MAX];
 Produto p;
 Venda v;
 Estoque e;
@@ -123,12 +124,12 @@ void venderProduto() {
 
             case 3:
                 printf("\nDigite sua quantia em dinheiro.\n");
-                scanf("%.2f", &v.dinheiro);
+                scanf("%f", &v.dinheiro);
                 if (v.dinheiro < v.total_compra) {
                     printf ("Voce nao tem dinheiro suficiente...\nEscolha outro metodo de pagamento ou coloque um valor de dinheiro maior.");
                     return;
                 } else { v.troco = v.dinheiro - v.total_compra;
-                         printf ("\nSeu troco e:%.2f", &v.troco);
+                         printf ("\nSeu troco e:%.2f", v.troco);
                 }
                 break;
 

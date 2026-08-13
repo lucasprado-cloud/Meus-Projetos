@@ -1,5 +1,5 @@
-#ifndef COMERCIO-TEMPLATE_H_INCLUDED
-#define COMERCIO-TEMPLATE_H_INCLUDED
+#ifndef COMERCIO_TEMPLATE_H_INCLUDED
+#define COMERCIO_TEMPLATE_H_INCLUDED
 
 #define MAX 100 //define o maximo de produtos que podem ser cadastrados
 
@@ -10,7 +10,7 @@ typedef struct {
     char nome[21];
     int codigo;
     float preco;
-    int quantidade_estoque
+    int quantidade_estoque;
 
 } Produto;
 

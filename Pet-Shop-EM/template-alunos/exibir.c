@@ -4,12 +4,7 @@
 #include <locale.h>
 #include "comercio-template.h"
 
-Produto estoque[MAX];
-Venda v;
-Produto p;
-Estoque e;
-
- // Lógica de mostrar estoque
+ // LÃ³gica de mostrar estoque
 void mostrarEstoque() {
     if (indice_produto == 0) {
         printf("\nNenhum produto cadastrado.\n");
