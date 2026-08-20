@@ -1,4 +1,3 @@
-# Projetos-Pessoais-
+# Meus-Projetos
 Repositório dos projetos pessoais.
-
-Este repositorio tem o objetivo de guardar programas pessoais.
+Este repositório tem o objetivo de guardar programas, projetos e trabalhos pessoais.
